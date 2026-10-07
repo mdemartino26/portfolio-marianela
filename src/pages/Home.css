@@ -1,0 +1,152 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.home__intro {
+  display: flex;
+  flex: 1 1 380px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.home__name {
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  line-height: 1.2;
+}
+
+/* ---------- Portada con carpetas apiladas ---------- */
+.cover {
+  display: flex;
+  flex: 1 1 320px;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 460px;
+  padding-top: 84px;
+  border-radius: 20px;
+  background: var(--ink);
+  color: var(--mint);
+  overflow: hidden;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack__folder {
+  --c: var(--cream);
+  position: relative;
+  display: block;
+  height: 60px;
+  margin-top: -12px;
+  background-color: var(--c);
+  /* línea de pliegue de la carpeta */
+  background-image: linear-gradient(rgba(1, 51, 43, 0.14), rgba(1, 51, 43, 0.14));
+  background-repeat: no-repeat;
+  background-position: 0 16px;
+  background-size: 100% 1px;
+  color: var(--ink);
+  text-decoration: none;
+  /* backwards: al terminar, la animación libera el transform para el hover */
+  animation: folder-in 0.7s var(--ease) backwards;
+  transition: transform 0.4s var(--ease);
+}
+
+.stack__folder:first-child {
+  margin-top: 0;
+}
+
+.stack__folder--sage {
+  --c: var(--sage);
+}
+
+.stack__tab {
+  position: absolute;
+  bottom: 100%;
+  left: var(--x);
+  padding: 9px 22px 8px;
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+  background: var(--c);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.stack__tab::before,
+.stack__tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: var(--tab-radius);
+  height: var(--tab-radius);
+}
+
+.stack__tab::before {
+  right: 100%;
+  background: radial-gradient(circle at 0 0, transparent calc(var(--tab-radius) - 0.5px), var(--c) var(--tab-radius));
+}
+
+.stack__tab::after {
+  left: 100%;
+  background: radial-gradient(circle at 100% 0, transparent calc(var(--tab-radius) - 0.5px), var(--c) var(--tab-radius));
+}
+
+.stack__folder:hover,
+.stack__folder:focus-visible {
+  transform: translateY(-10px);
+}
+
+@keyframes folder-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+.cover__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 36px 32px 32px;
+}
+
+.cover__mark {
+  width: 54px;
+  height: 54px;
+  fill: var(--mint);
+  animation: spin 24s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cover__text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .cover {
+    min-height: 400px;
+  }
+
+  .stack__tab {
+    padding: 8px 14px 7px;
+    font-size: 0.7rem;
+  }
+}

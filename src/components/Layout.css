@@ -1,0 +1,225 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(14px, 4vw, 40px);
+}
+
+/* ---------- Barra superior ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--mint);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand__mark {
+  width: 30px;
+  height: 30px;
+  fill: var(--mint);
+  transition: transform 0.8s var(--ease);
+}
+
+.brand:hover .brand__mark {
+  transform: rotate(120deg);
+}
+
+.lang-toggle {
+  position: relative;
+  display: flex;
+  padding: 4px;
+  border: 1.5px solid rgba(197, 239, 200, 0.45);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--mint);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.lang-toggle__option {
+  position: relative;
+  width: 40px;
+  padding: 6px 0;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.lang-toggle__thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 40px;
+  height: calc(100% - 8px);
+  border-radius: 999px;
+  background: var(--mint);
+  transition: transform 0.35s var(--ease);
+}
+
+.lang-toggle[data-lang='en'] .lang-toggle__thumb {
+  transform: translateX(40px);
+}
+
+.lang-toggle[data-lang='es'] .lang-toggle__option:nth-of-type(2),
+.lang-toggle[data-lang='en'] .lang-toggle__option:nth-of-type(3) {
+  color: var(--ink);
+}
+
+/* ---------- Pestañas de carpeta (menú) ---------- */
+.tabs {
+  overflow-x: auto;
+  /* recorta la parte hundida de las pestañas inactivas */
+  overflow-y: hidden;
+  scrollbar-width: none;
+  /* aire arriba para que las pestañas puedan subir al hacer hover */
+  padding-top: 8px;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs__list {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  min-width: max-content;
+  padding-right: 16px;
+}
+
+.tabs__item--end {
+  margin-left: auto;
+}
+
+.tab {
+  --tab: var(--cream);
+  position: relative;
+  display: block;
+  padding: 13px 24px 15px;
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+  background: var(--tab);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* las inactivas quedan "hundidas" detrás de la hoja */
+  transform: translateY(calc(9px + var(--step, 0px)));
+  filter: brightness(0.86);
+  transition: transform 0.4s var(--ease), filter 0.3s;
+}
+
+.tab--sage {
+  --tab: var(--sage);
+}
+
+/* curvas cóncavas en la base, como una pestaña de cartulina */
+.tab::before,
+.tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: var(--tab-radius);
+  height: var(--tab-radius);
+}
+
+.tab::before {
+  right: 100%;
+  background: radial-gradient(circle at 0 0, transparent calc(var(--tab-radius) - 0.5px), var(--tab) var(--tab-radius));
+}
+
+.tab::after {
+  left: 100%;
+  background: radial-gradient(circle at 100% 0, transparent calc(var(--tab-radius) - 0.5px), var(--tab) var(--tab-radius));
+}
+
+.tabs__item:first-child .tab::before {
+  display: none;
+}
+
+.tab:hover {
+  transform: translateY(3px);
+  filter: none;
+}
+
+.tab.is-active {
+  transform: translateY(0);
+  filter: none;
+  font-weight: 700;
+}
+
+/* ---------- Hoja de la carpeta ---------- */
+.sheet {
+  --sheet: var(--cream);
+  position: relative;
+  flex: 1;
+  padding: clamp(24px, 5vw, 64px);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  box-shadow: 0 40px 70px -40px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.5s var(--ease), border-radius 0.4s var(--ease);
+}
+
+.sheet--sage {
+  --sheet: var(--sage);
+}
+
+/* la primera pestaña cae justo sobre la esquina: queda recta */
+.sheet--first {
+  border-top-left-radius: 0;
+}
+
+.sheet__page {
+  animation: page-in 0.55s var(--ease) both;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* ---------- Pie ---------- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 28px 4px 36px;
+  color: rgba(197, 239, 200, 0.7);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .brand__name {
+    font-size: 0.95rem;
+  }
+
+  .tabs__list {
+    gap: 14px;
+  }
+
+  .tab {
+    padding: 11px 16px 13px;
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,105 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(22, 22, 28, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+  height: var(--header-height);
+}
+
+.site-header-logo {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header-nav {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.site-header-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-header-link:hover {
+  color: var(--color-text);
+}
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.site-header-lang {
+  padding: 0.3em 0.7em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.site-header-lang:hover {
+  border-color: var(--color-mint);
+  color: var(--color-mint);
+}
+
+/* Hamburger: three lines, like in the reference design. Only on small screens. */
+.site-header-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.site-header-menu span {
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+@media (max-width: 760px) {
+  .site-header-menu {
+    display: flex;
+  }
+
+  .site-header-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header-nav.is-open {
+    display: flex;
+  }
+
+  .site-header-link {
+    padding: var(--space-s);
+    border-top: 1px solid var(--color-border);
+  }
+}

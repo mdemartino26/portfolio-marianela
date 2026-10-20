@@ -1,0 +1,121 @@
+{
+  "skip": "Skip to content",
+  "nav": {
+    "label": "Main navigation",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Menu",
+    "back": "Back to the site"
+  },
+  "lang": {
+    "label": "Cambiar a español",
+    "short": "ES"
+  },
+  "hero": {
+    "line1": "code",
+    "line2": "& design",
+    "line3": "with meaning",
+    "ctaProjects": "See projects",
+    "ctaCv": "Download CV",
+    "creatingCv": "Creating PDF…"
+  },
+  "about": {
+    "title": "about me",
+    "awardLabel": "Award",
+    "languagesLabel": "Languages"
+  },
+  "skills": {
+    "title": "skills"
+  },
+  "experience": {
+    "title": "experience",
+    "now": "Present"
+  },
+  "projects": {
+    "title": "projects",
+    "all": "All",
+    "filterLabel": "Filter projects by category",
+    "categories": {
+      "web": "Web",
+      "uxui": "UX/UI",
+      "branding": "Branding",
+      "multimedia": "Multimedia"
+    },
+    "view": "View project",
+    "visit": "Open link",
+    "close": "Close",
+    "openPdf": "Open PDF",
+    "empty": "No projects in this category yet.",
+    "loading": "Loading projects…"
+  },
+  "education": {
+    "title": "education"
+  },
+  "contact": {
+    "title": "contact",
+    "intro": "Have a project, a job offer or a question? Write to me and I'll get back to you soon.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you! Your message was sent.",
+    "mailto": "Your mail app opened with the message ready to send.",
+    "error": "The message could not be sent. Try again or email me directly.",
+    "subject": "Contact from the portfolio",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email.",
+      "message": "Write at least 10 characters."
+    }
+  },
+  "admin": {
+    "title": "admin",
+    "intro": "Add projects to the portfolio. Data goes to Firestore and files to Cloudinary.",
+    "notReady": "Firebase is not configured. Copy .env.example as .env, add your credentials and restart the dev server.",
+    "loginTitle": "Private access",
+    "email": "Email",
+    "password": "Password",
+    "login": "Sign in",
+    "loggingIn": "Signing in…",
+    "loginError": "Wrong email or password.",
+    "logout": "Sign out",
+    "signedInAs": "Signed in as",
+    "newProject": "New project",
+    "titleEs": "Title (Spanish)",
+    "titleEn": "Title (English)",
+    "descriptionEs": "Description (Spanish)",
+    "descriptionEn": "Description (English)",
+    "englishHint": "If you leave the English fields empty, the Spanish text is shown in both languages.",
+    "category": "Category",
+    "files": "Project files",
+    "dropHint": "Drag images, videos or PDFs here",
+    "chooseFiles": "Choose files",
+    "limits": "Images up to 10 MB · PDF up to 10 MB · Video up to 100 MB. The first image is the cover.",
+    "cover": "cover",
+    "makeCover": "Make cover",
+    "remove": "Remove",
+    "badType": "file type not allowed",
+    "tooBig": "is bigger than",
+    "video": "YouTube or Vimeo video (optional)",
+    "link": "External link (Behance, website, GitHub…)",
+    "save": "Upload project",
+    "saving": "Uploading…",
+    "saved": "Project published.",
+    "saveError": "Could not save. Check your Firestore rules and Cloudinary setup.",
+    "required": "Title and description in Spanish are required.",
+    "invalidLink": "The link must start with http:// or https://",
+    "invalidVideo": "The video must be a YouTube or Vimeo link.",
+    "published": "Published projects",
+    "none": "No projects yet.",
+    "filesCount": "files",
+    "delete": "Delete",
+    "confirmDelete": "Delete this project? This can't be undone."
+  },
+  "footer": {
+    "made": "Designed & built with React."
+  }
+}

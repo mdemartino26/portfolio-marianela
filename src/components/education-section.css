@@ -1,0 +1,23 @@
+.education-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+}
+
+.education-item {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: var(--space-s);
+  border-left: 1px solid var(--color-border);
+}
+
+.education-status {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.education-title {
+  font-size: 1.05rem;
+}

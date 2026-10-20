@@ -1,0 +1,121 @@
+{
+  "skip": "Saltar al contenido",
+  "nav": {
+    "label": "Navegación principal",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "back": "Volver al sitio"
+  },
+  "lang": {
+    "label": "Switch to English",
+    "short": "EN"
+  },
+  "hero": {
+    "line1": "código",
+    "line2": "& diseño",
+    "line3": "con sentido",
+    "ctaProjects": "Ver proyectos",
+    "ctaCv": "Descargar CV",
+    "creatingCv": "Generando PDF…"
+  },
+  "about": {
+    "title": "sobre mí",
+    "awardLabel": "Premio",
+    "languagesLabel": "Idiomas"
+  },
+  "skills": {
+    "title": "habilidades"
+  },
+  "experience": {
+    "title": "experiencia",
+    "now": "Actualidad"
+  },
+  "projects": {
+    "title": "proyectos",
+    "all": "Todos",
+    "filterLabel": "Filtrar proyectos por categoría",
+    "categories": {
+      "web": "Web",
+      "uxui": "UX/UI",
+      "branding": "Branding",
+      "multimedia": "Multimedia"
+    },
+    "view": "Ver proyecto",
+    "visit": "Abrir link",
+    "close": "Cerrar",
+    "openPdf": "Abrir PDF",
+    "empty": "Todavía no hay proyectos en esta categoría.",
+    "loading": "Cargando proyectos…"
+  },
+  "education": {
+    "title": "formación"
+  },
+  "contact": {
+    "title": "contacto",
+    "intro": "¿Tenés un proyecto, una propuesta laboral o una consulta? Escribime y te respondo a la brevedad.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": "¡Gracias! Tu mensaje fue enviado.",
+    "mailto": "Se abrió tu correo con el mensaje listo para enviar.",
+    "error": "No se pudo enviar el mensaje. Probá de nuevo o escribime directamente.",
+    "subject": "Contacto desde el portfolio",
+    "errors": {
+      "name": "Ingresá tu nombre.",
+      "email": "Ingresá un correo válido.",
+      "message": "Escribí al menos 10 caracteres."
+    }
+  },
+  "admin": {
+    "title": "admin",
+    "intro": "Cargá proyectos al portfolio. Los datos van a Firestore y los archivos a Cloudinary.",
+    "notReady": "Firebase no está configurado. Copiá .env.example como .env, completá tus credenciales y reiniciá el servidor.",
+    "loginTitle": "Acceso privado",
+    "email": "Correo",
+    "password": "Contraseña",
+    "login": "Ingresar",
+    "loggingIn": "Ingresando…",
+    "loginError": "Correo o contraseña incorrectos.",
+    "logout": "Cerrar sesión",
+    "signedInAs": "Sesión iniciada como",
+    "newProject": "Nuevo proyecto",
+    "titleEs": "Título (español)",
+    "titleEn": "Título (inglés)",
+    "descriptionEs": "Descripción (español)",
+    "descriptionEn": "Descripción (inglés)",
+    "englishHint": "Si dejás vacíos los campos en inglés, se muestra el texto en español en los dos idiomas.",
+    "category": "Categoría",
+    "files": "Archivos del proyecto",
+    "dropHint": "Arrastrá acá imágenes, videos o PDFs",
+    "chooseFiles": "Elegir archivos",
+    "limits": "Imágenes hasta 10 MB · PDF hasta 10 MB · Video hasta 100 MB. La primera imagen es la portada.",
+    "cover": "portada",
+    "makeCover": "Hacer portada",
+    "remove": "Quitar",
+    "badType": "tipo de archivo no permitido",
+    "tooBig": "supera",
+    "video": "Video de YouTube o Vimeo (opcional)",
+    "link": "Link externo (Behance, sitio, GitHub…)",
+    "save": "Subir proyecto",
+    "saving": "Subiendo…",
+    "saved": "Proyecto publicado.",
+    "saveError": "No se pudo guardar. Revisá las reglas de Firestore y la configuración de Cloudinary.",
+    "required": "Completá título y descripción en español.",
+    "invalidLink": "El link debe empezar con http:// o https://",
+    "invalidVideo": "El video debe ser un link de YouTube o Vimeo.",
+    "published": "Proyectos publicados",
+    "none": "Todavía no hay proyectos.",
+    "filesCount": "archivos",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Eliminar este proyecto? No se puede deshacer."
+  },
+  "footer": {
+    "made": "Diseñado y desarrollado con React."
+  }
+}

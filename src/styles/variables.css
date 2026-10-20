@@ -1,0 +1,28 @@
+/* Design tokens: change a color or size here and it updates the whole site. */
+:root {
+  /* Colors */
+  --color-bg: #16161c;
+  --color-surface: #1e1e26;
+  --color-border: #2e2e39;
+  --color-text: #e8e6e1;
+  --color-muted: #9b99a5;
+
+  /* Brand accents (from the reference design). Use them only in small doses. */
+  --color-coral: #f07a5c;
+  --color-mint: #5cd3a8;
+  --color-purple: #c77dde;
+
+  /* Fonts */
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+
+  /* Sizes */
+  --container-width: 1100px;
+  --header-height: 64px;
+  --radius: 6px;
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2.5rem;
+  --space-xl: 5rem;
+}

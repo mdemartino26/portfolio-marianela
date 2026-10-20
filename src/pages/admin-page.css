@@ -1,0 +1,134 @@
+.admin-page {
+  min-height: calc(100vh - var(--header-height));
+  padding: var(--space-xl) 0;
+}
+
+.admin-page .section-title {
+  margin-bottom: var(--space-s);
+}
+
+.admin-intro {
+  margin-bottom: var(--space-l);
+}
+
+.admin-session {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+}
+
+.admin-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-m);
+}
+
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.admin-card-title {
+  font-size: 1.15rem;
+}
+
+.admin-login {
+  max-width: 420px;
+}
+
+.admin-form {
+  flex: 2 1 460px;
+}
+
+.admin-list {
+  flex: 1 1 260px;
+}
+
+.admin-button {
+  align-self: flex-start;
+}
+
+.admin-hint {
+  font-size: 0.8rem;
+}
+
+/* Two fields side by side (Spanish | English). They stack on small screens. */
+.admin-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.admin-form-row .form-field {
+  flex: 1 1 220px;
+}
+
+.admin-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-m);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.admin-files,
+.admin-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.admin-files {
+  margin-top: var(--space-s);
+}
+
+.admin-file,
+.admin-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  padding: var(--space-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.admin-file-thumb {
+  flex: 0 0 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  overflow: hidden;
+}
+
+.admin-file-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-file-text,
+.admin-list-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}

@@ -7,9 +7,9 @@ export const profile = {
 
   // TODO: paste your URLs. Empty ones are hidden.
   links: {
-    github: '',
-    linkedin: '',
-    behance: '',
+    github: 'https://github.com/mdemartino26',
+    linkedin: 'https://www.linkedin.com/in/marianelademartino',
+    behance: 'https://www.behance.net/marianelademartino',
   },
 
   role: {
